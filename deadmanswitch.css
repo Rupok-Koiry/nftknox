@@ -73,6 +73,11 @@ main header {
   display: none;
 }
 .registration-section {
-  max-height: 43vh;
+  max-height: 76vh;
   overflow-y: scroll;
+}
+@media screen and (max-width: 768px) {
+  #logo-text {
+    font-size: 36px;
+  }
 }
