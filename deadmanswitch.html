@@ -1,0 +1,283 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blockchain Mailing Address Registration</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/svg" href="metamask-fox.svg" /> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width : 568px)">
+	<script type="text/javascript" src="js/mobile.js"></script>
+    <link rel="stylesheet" href="deadmanswitch.css" type="text/css" />
+  </head>
+
+  <body>
+    <header id="header">
+      <!-- <p>
+        <h1 style="font-family:gunplay;font-size:100px;">NFT Knox</h1>   
+      </p> -->
+      <a href="index.html">
+        <img src="images/logo-medium.png" alt="logo" height="120">
+      </a>
+      <ul id="navigation">
+        <li>
+          <a href="index.html">store</a>
+        </li>
+        <li class="selected">
+          <a href="deadmanswitch.html">register mailing address</a>
+        </li>
+        <li>
+          <a href="redeem.html">redeem nft</a>
+        </li>
+        <li>
+          <a href="create_listing.html">create listing</a>
+        </li>
+        <li>
+          <a href="contact.html">contact</a>
+        </li>
+        <li>
+          <a href="about.html">about</a>
+        </li>
+      </ul>
+    </header>
+    <main class="container-fluid">
+      <header>
+        <div id="logo-container">
+          <h1 id="logo-text" class="text-center">
+            Blockchain Mailing Address Registration
+          </h1>
+
+          <!-- <img id="mm-logo" src="metamask-fox.svg" /> -->
+        </div>
+      </header>
+      <!--  <section> -->
+        <!-- <h3 class="card-title">
+          Status
+        </h3>
+        <div id="warning" class="row justify-content-center error-div">
+          <div class="error-message justify-content-center col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+            <img
+              src="alert-red.svg"
+              alt=""
+              class="error-message-icon
+              "
+            />
+            <div class="error-message-text">You are on the Ethereum Mainnet.</div>
+          </div>
+        </div> -->
+        <!-- <div class="row">
+          <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+            <p class="info-text alert alert-primary">
+              Network: <span id="network"></span>
+            </p>
+          </div> -->
+
+          <!-- <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+            <p class="info-text alert alert-secondary">
+              ChainId: <span id="chainId"></span>
+            </p>
+          </div> -->
+
+          <!-- <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+            <p class="info-text alert alert-success">
+              Accounts: <span id="accounts"></span>
+            </p>
+          </div> -->
+        </div>
+      </section>
+
+      <section>
+        <div class="row d-flex justify-content-center">
+          <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">
+                  Step 1:  Connect your Metamask Wallet!
+                </h4>
+
+                <button
+                  class="btn btn-primary btn-lg btn-block mb-3"
+                  id="connectButton"
+                  disabled
+                >
+                  Connect
+                </button>
+
+                <!-- <button
+                  class="btn btn-primary btn-lg btn-block mb-3"
+                  id="getAccounts"
+                >
+                  eth_accounts
+                </button>
+
+                <p class="info-text alert alert-secondary">
+                  eth_accounts result: <span id="getAccountsResult"></span>
+                </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="row registration-section">
+          
+          <div
+            class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch mx-auto"
+          >
+            <div class="card full-width">
+              <div class="card-body">
+                <h4>
+                  Step 2:  Securely Sign your Mailing Address (free)
+                </h4>
+
+                <div class="form-group">
+                  <label>Name</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="nameInput"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Street</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="streetInput"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>City</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="cityInput"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>State</label>
+                  
+                  <select name="state" id="stateInput">
+                    <option value="" selected="selected">Select a State</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                  </select>
+
+
+                </div>
+
+                <div class="form-group">
+                  <label>Zip Code</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="zipInput"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Mobile Phone Number</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="phoneInput"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Email Address</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="emailInput"
+                  />
+                </div>
+ 
+
+                <button
+                  class="btn btn-primary btn-lg btn-block mb-3"
+                  id="signTypedDataV4"
+                  disabled
+                >
+                 Securely Sign Mailing Address
+                </button>
+
+                <p class="info-text alert alert-warning">
+                 Status:
+
+                  <span id="signTypedDataV4Result"></span>
+                </p>
+
+         
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <script src="bundle.js" defer></script>
+  </body>
+</html>
